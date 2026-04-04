@@ -21,3 +21,6 @@
 - appendix_dict.py: 辞書の使い方
 - appendix_list.py: 配列の使い方
 
+## 引用元
+本レポジトリは京都大学のJapanese Movie Recomendation Datasetを利用しております。素晴らしいデータをありがとうございます。
+- データ: https://github.com/ku-nlp/JMRD/tree/main
