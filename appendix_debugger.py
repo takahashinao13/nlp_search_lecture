@@ -4,13 +4,14 @@ dictionary = {
     'key2': 'value2',
 }
 
-# 以下の行を差し込んで実行すると、以下の行でストップする
+# 以下の行を差し込んで実行すると、その行で一時ストップする
 import pdb; pdb.set_trace()
 
 dictionary['new_key'] = 'new_value'
 
 # どこでも差し込めます
-import pdb; pdb.set_trace()
+for i in range(10):
+    import pdb; pdb.set_trace()
 
 # デバッガー起動時は
 # `c`+Enterで続きを実行

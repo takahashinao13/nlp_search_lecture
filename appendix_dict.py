@@ -4,21 +4,22 @@ dictionary = {
     'key2': 'value2',
 }
 
-# keyでアクセスできる
+# keyに存在する文字列でアクセスできる
 print('-------')
 print(dictionary['key1'])
 print(dictionary['key2'])
 # print(dict['key3']) # 存在しないkeyはエラーとなる
 
-# keyの追加もできる
-dictionary['new_key'] = 'new_value'
+# keyの追加
 print('-------')
+dictionary['new_key'] = 'new_value'
+dictionary[1] = 'integer is fine'
 print(dictionary)
 
 # keyだけを配列として抽出
 print('-------')
 print([key for key in dictionary.keys()])
 
-print('-------')
 # valueだけを配列として抽出
+print('-------')
 print([value for value in dictionary.values()])

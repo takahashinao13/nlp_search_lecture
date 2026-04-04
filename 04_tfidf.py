@@ -1,6 +1,5 @@
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 
 with open('./texts.json', 'r') as f:
     data = json.load(f)
