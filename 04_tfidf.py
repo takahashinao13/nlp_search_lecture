@@ -7,18 +7,19 @@ with open('./texts.json', 'r', encoding="utf-8") as f:
 # タイトル(文字列)の配列
 texts = list(data.values())
 
-# tfidfモデルの学習とテキストの変換
+# tfidfモデルの学習
 vectorizer = TfidfVectorizer()
-sparse_vectors = vectorizer.fit_transform(texts)
+vectorizer.fit(texts)
 
 # 単語配列の取得
 words = vectorizer.get_feature_names_out()
 
-# index = 11の情報を確認する
-index = 11
+# ベクトル化の確認
+title = '時をかける少女'
+text = data[title]
 print('-------')
-print(texts[index])
-for word_index, weight in enumerate(sparse_vectors[index].toarray()[0]):
+vector = vectorizer.transform([text])[0] # あらすじのベクトル化
+for word_index, weight in enumerate(vector.toarray()[0]):
     if weight > 0: # 重要度weightが0以上のものだけ表示する
         print('\t', words[word_index], weight)
 
