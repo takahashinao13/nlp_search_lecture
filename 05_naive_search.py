@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import (
     euclidean_distances,
 )
 
-with open('./texts.json', 'r') as f:
+with open('./texts.json', 'r', encoding="utf-8") as f:
     # 映画のタイトル(文字列)->あらすじ(文字列)の辞書
     data = json.load(f)
 

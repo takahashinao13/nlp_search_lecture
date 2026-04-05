@@ -1,7 +1,7 @@
 import json
 from janome.tokenizer import Tokenizer
 
-with open('./train.json', 'r') as f:
+with open('./train.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 texts = {
@@ -16,5 +16,5 @@ texts = {
      for title, text in texts.items()
 }
 
-with open('./texts.json', 'w') as f:
+with open('./texts.json', 'w', encoding="utf-8") as f:
     json.dump(texts, f, indent=2, ensure_ascii=False)    

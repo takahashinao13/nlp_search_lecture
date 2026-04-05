@@ -1,7 +1,7 @@
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-with open('./texts.json', 'r') as f:
+with open('./texts.json', 'r', encoding="utf-8") as f:
     data = json.load(f)
 
 # タイトル(文字列)の配列
